@@ -33,12 +33,23 @@ function draw() {
   fill(255, 0, 255);
   strokeWeight(0);
   textFont(myFont);
+  
+  // Left-aligned text for labels
+  textAlign(LEFT);
   text("Scale", 20, 40);
   text("Colour", 20, 100);
   text("Saturation", 20, 160);
   text("*Press Return⏎ to Save", 20, 220);
-  text("Oko Display ©GuoYu 2024", 20, 615);
+  
+  // Centered text for the footer
+  textAlign(CENTER);
+  text("Oko Display ©GuoYu 2024", width / 2, 615);
 }
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 
 function drawShapes(buffer = null) {
   let scaleFactor = scaleSlider.value();
@@ -79,7 +90,7 @@ function drawShapes(buffer = null) {
   ctx.strokeWeight(50 * scaleFactor);
   ctx.noFill();
 
-  let centerX = width / 2.2;
+  let centerX = width / 2.4;
   let centerY = height / 2;
 
   ctx.line(centerX - 150 * scaleFactor, centerY - 100 * scaleFactor, centerX - 150 * scaleFactor, centerY + 100 * scaleFactor);
@@ -130,6 +141,10 @@ function keyPressed() {
     buffer.angleMode(DEGREES);
     
     drawShapes(buffer);
+
+    save(buffer, 'Oko Display Online Editor.png');
+  }
+}
 
     save(buffer, 'Oko Display Online Editor.png');
   }
