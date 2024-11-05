@@ -41,9 +41,9 @@ function draw() {
   text("Saturation", 20, 160);
   text("*Press Return⏎ to Save", 20, 220);
   
-  // Centered text for the footer
+ // Centered text for the footer
   textAlign(CENTER);
-  text("Oko Display ©GuoYu 2024", width / 2, 615);
+  text("Oko Display ©GuoYu 2024", width / 2, height - 20);
 }
 
 function windowResized() {
