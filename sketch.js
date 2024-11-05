@@ -37,7 +37,7 @@ function draw() {
   text("Colour", 20, 100);
   text("Saturation", 20, 160);
   text("*Press Return⏎ to Save", 20, 220);
-  text("Oko Display ©GuoYu 2024", 20, 650);
+  text("Oko Display ©GuoYu 2024", 20, 700);
 }
 
 function drawShapes(buffer = null) {
