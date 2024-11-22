@@ -30,7 +30,7 @@ function draw() {
   drawShapes();
 
   textSize(14.5);
-  fill(255, 0, 255);
+  fill(245, 177, 174);
   strokeWeight(0);
   textFont(myFont);
   
